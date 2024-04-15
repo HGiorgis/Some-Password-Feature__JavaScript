@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Password</title>
+</head>
+<script src="script.js"></script>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Complete <br><span>Password Feature</span></h2>
+        </div>
+        <div class="password" id="inputZone">
+            <input type="password" id="password"  placeholder="Enter password">
+            <div class="icon">
+                <i class="fa-solid fa-eye" id="show" onclick="viewPassword()"></i>
+                <i class="fa-solid fa-eye-slash" id="hide" onclick="viewPassword()"></i>
+                <i class="fa-solid fa-copy" id="copy" onclick="copyPassword()"></i>
+            </div>
+        </div>
+        <div class="message">
+            <p id="msg">Password is <span id="strength"></span></p>
+            <hr id="strengthBar">
+        </div>
+        <div class="btn">
+            <div class="set">
+                <button type="submit" onclick="toastMessage(setMsg)"><i class="fa-thin fa-lock"></i> Set Password</button>
+            </div>
+            <div class="generate" onclick="toastMessage(genMsg)">
+                <button onclick="generatePassword()" ><i class="fa-solid fa-bolt"></i> Generate Password</button>
+            </div>
+        </div>
+        <div class="info" id="copied">
+            <p id="textValue">Copied</p>
+        </div>
+    </div>
+    <div id="toastBox"></div>
+</body>
+</html>
